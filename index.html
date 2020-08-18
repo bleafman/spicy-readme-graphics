@@ -1,0 +1,231 @@
+<!DOCTYPE HTML>
+<!--
+	// Put your secret comment for other coders here (if you're using this as a personal landing page).
+-->
+<html>
+
+<head>
+
+	<!-- Meta -->
+	<title>Make is Spicy 🔥🔥🔥</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+	<!-- Styles -->
+	<link rel="stylesheet" href="assets/css/main.css" />
+
+	<!-- TS Particle -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/1.17.8/tsparticles.min.js"
+		integrity="sha512-JQh9uNSQnCT+cUNvDFrBWiNAO6+jmkjCIam2MbJmvZzI1JlBGHDu6KNfMHPf4WCkiIbumYQPGTjIVhmbBG+hMA=="
+		crossorigin="anonymous"></script>
+	<script src="tsparticles.min.js"></script>
+
+	<!-- TypeIt -->
+	<script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+
+	<!-- JS Disabled -->
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+	<div id="wrapper">
+
+		<!-- Particle effects are attached to #bg -->
+		<div id="bg"></div>
+		
+		<div id="main">
+			<!-- Header -->
+			<header id="header">
+				<h1 id="title"></h1>
+				<br />
+				<p id="sub"></p>
+			</header>
+
+			<!-- Footer -->
+			<footer id="footer">
+			</footer>
+		</div>
+	</div>
+
+	<script>
+
+
+		/*****
+			 *  
+			 * Text and Typing Effect START
+			 * Check out the TypeIt Docs for more info: https://typeitjs.com/
+			 * 
+		*****/
+
+		const title = new TypeIt("#title", {
+			speed: 70,
+			deleteSpeed: 20,
+			startDelay: 750,
+			nextStringDelay: 1000,
+			waitUntilVisible: true,
+			afterString: async (step, instance) => {
+				instance.freeze();
+				sub.unfreeze();
+			}
+		}).type("Have you ever wanted to have a 🔥🔥🔥 README graphic?").pause(250).delete()
+		.type("How about a cool splash page?").pause(250).delete()
+		.type("Check out this code and make your own:");
+
+		const sub = new TypeIt("#sub", {
+			speed: 40,
+			deleteSpeed: 20,
+			startDelay: 750,
+			nextStringDelay: 1000,
+			waitUntilVisible: true,
+			afterString: async (step, instance) => {
+				instance.freeze();
+				title.unfreeze();
+			}
+		}).type("I know I did!").pause(500).delete()
+		.type("That too!").pause(250).delete()
+		.type(`<a href="https://github.com/bleafman/spicy-pages">Repo<a>`).pause(250).delete();
+
+		title.go();
+
+		/***** Text and Typing Effect END *****/
+
+		/*****
+		 *  
+		 * Particle Effect START
+		 * 
+		 * Check out the tsParticle sDocs for more info: https://github.com/matteobruni/tsparticles
+		 * Some demo configs for tsParticles: https://github.com/matteobruni/tsparticles
+		 * 
+		 * 
+	  *****/
+
+		tsParticles
+  .load("bg", {
+    fpsLimit: 60,
+    backgroundMode: {
+      enable: true,
+      zIndex: 0
+    },
+    particles: {
+      number: {
+        value: 80,
+        density: {
+          enable: true,
+          area: 800
+        }
+      },
+      color: {
+        value: "#ff0000",
+        animation: {
+          enable: true,
+          speed: 20,
+          sync: true
+        }
+      },
+      stroke: {
+        width: 0
+      },
+      opacity: {
+        value: 0.5,
+        random: false,
+        animation: {
+          enable: false,
+          speed: 3,
+          minimumValue: 0.1,
+          sync: false
+        }
+      },
+      size: {
+        value: 3,
+        random: true,
+        animation: {
+          enable: false,
+          speed: 20,
+          minimumValue: 0.1,
+          sync: false
+        }
+      },
+      links: {
+        enable: true,
+        distance: 100,
+        color: "#ffffff",
+        opacity: 0.4,
+        width: 1
+      },
+      move: {
+        enable: true,
+        speed: 6,
+        direction: "none",
+        random: false,
+        straight: false,
+        outMode: "out",
+        attract: {
+          enable: false,
+          rotateX: 600,
+          rotateY: 1200
+        }
+      }
+    },
+    interactivity: {
+      detectsOn: "canvas",
+      events: {
+        onHover: {
+          enable: true,
+          mode: "repulse"
+        },
+        onClick: {
+          enable: true,
+          mode: "push"
+        },
+        resize: true
+      },
+      modes: {
+        grab: {
+          distance: 400,
+          links: {
+            opacity: 1
+          }
+        },
+        bubble: {
+          distance: 400,
+          size: 40,
+          duration: 2,
+          opacity: 0.8
+        },
+        repulse: {
+          distance: 200
+        },
+        push: {
+          quantity: 4
+        },
+        remove: {
+          quantity: 2
+        }
+      }
+    },
+    detectRetina: true,
+    background: {
+      color: "CBD5E0",
+      image: "",
+      position: "50% 50%",
+      repeat: "no-repeat",
+      size: "cover"
+    }
+  })
+
+
+		/***** Particle Effect END *****/
+
+
+		// Peloading / Fade-in Effect
+
+		window.onload = function () { document.body.classList.remove('is-preload'); }
+		window.ontouchmove = function () { return false; }
+		window.onorientationchange = function () { document.body.scrollTop = 0; }
+
+	</script>
+</body>
+
+</html>
