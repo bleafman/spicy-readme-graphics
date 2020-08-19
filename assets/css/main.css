@@ -4,13 +4,14 @@
 
 Make changes to the CSS Variables below (inside the :root) for easy customization.
 
-Most of the other CSS is for the fade in effect and responsiveness (if used as a landing page).
+Most of the other CSS is for the fade in effect and responsiveness (if used as a landing page)
+and for reseting the browser's default stying for elements.
 
 *****/
 
 :root {
-	--main-bg-color: black; /* Note that the particle effect will override this background */
 	--main-text-color: #F7FAFC;
+	--main-bg-color: black; /* Note that the particle effect will override this background */
 	--main-font-family: "Source Sans Pro", sans-serif;
 }
 
