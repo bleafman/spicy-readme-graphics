@@ -1,228 +1,246 @@
+<!-- Feel free ignore everything until the CUSTOMIZATION STARTS HERE comment -->
+
+
 <!DOCTYPE HTML>
 <!--
-	// Put your secret comment for other coders here (if you're using this as a personal landing page).
+	Put your secret comment for other coders here (if you're using this as a personal landing page).
 -->
 <html>
 
 <head>
+  <!-- Meta Tags -->
+  <title>make it 🔥</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-	<!-- Meta -->
-	<title>make it 🔥</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/main.css" />
 
-	<!-- Styles -->
-	<link rel="stylesheet" href="assets/css/main.css" />
+  <!-- TS Particle -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/1.17.8/tsparticles.min.js"
+    integrity="sha512-JQh9uNSQnCT+cUNvDFrBWiNAO6+jmkjCIam2MbJmvZzI1JlBGHDu6KNfMHPf4WCkiIbumYQPGTjIVhmbBG+hMA=="
+    crossorigin="anonymous"></script>
 
-	<!-- TS Particle -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/1.17.8/tsparticles.min.js"
-		integrity="sha512-JQh9uNSQnCT+cUNvDFrBWiNAO6+jmkjCIam2MbJmvZzI1JlBGHDu6KNfMHPf4WCkiIbumYQPGTjIVhmbBG+hMA=="
-		crossorigin="anonymous"></script>
+  <!-- TypeIt -->
+  <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
 
-	<!-- TypeIt -->
-	<script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
-
-	<!-- JS Disabled -->
-	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" />
-	</noscript>
+  <!-- JS Disabled -->
+  <noscript>
+    <link rel="stylesheet" href="assets/css/noscript.css" />
+  </noscript>
 </head>
 
 <body class="is-preload">
-	<div id="wrapper">
+  <div id="wrapper">
 
-		<!-- Particle effects are attached to #bg -->
-		<div id="bg"></div>
-		
-		<div id="main">
-			<!-- Header -->
-			<header id="header">
-				<h1 id="title"></h1>
-				<br />
-				<p id="sub"></p>
-			</header>
+    <!-- Particle effects are attached to #bg -->
+    <div id="bg"></div>
 
-			<!-- Footer -->
-			<footer id="footer">
-			</footer>
-		</div>
-	</div>
+    <div id="main">
+      <!-- Header -->
+      <header id="header">
+        <h1 id="title"></h1>
+        <br />
+        <p id="sub"></p>
+      </header>
 
-	<script>
+      <!-- Footer -->
+      <footer id="footer">
+      </footer>
+    </div>
+  </div>
 
+  <script>
+
+
+    /***** CUSTOMIZATION STARTS HERE	*****/
 
 		/*****
 			 *  
 			 * Text and Typing Effect START
-			 * Check out the TypeIt Docs for more info: https://typeitjs.com/
+       * 
+       * TypeIt is a pretty awesome typing effect library. 
+       * 
+       * You can edit the strings in the .type() functions if you just want to change the text.
+       * 
+       * As you can see in the example below, they also take HTML.
+       * 
+			 * If you want to do more advanced features, check out the TypeIt Docs for more info: https://typeitjs.com/
 			 * 
 		*****/
 
-		const title = new TypeIt("#title", {
-			speed: 70,
-			deleteSpeed: 20,
-			startDelay: 750,
-			nextStringDelay: 1000,
-			waitUntilVisible: true,
-			afterString: async (step, instance) => {
-				instance.freeze();
-				sub.unfreeze();
-			}
-		}).type("Have you ever wanted to have a <br/> 🔥 README graphic?").pause(250).delete()
-		.type("Check out this code and add some <br/><span style='color: #FC8181;'>spice</span> to your repos!");
+    const title = new TypeIt("#title", {
+      speed: 70,
+      deleteSpeed: 20,
+      startDelay: 750,
+      nextStringDelay: 1000,
+      waitUntilVisible: true,
+      afterString: async (step, instance) => {
+        instance.freeze();
+        sub.unfreeze();
+      }
+    }).type("Have you ever wanted to have a <br/> 🔥 README graphic?").pause(250).delete()
+      .type("Check out this code and add some <br/><span style='color: #FC8181;'>spice</span> to your repos!");
 
-		const sub = new TypeIt("#sub", {
-			speed: 40,
-			deleteSpeed: 20,
-			startDelay: 750,
-			nextStringDelay: 1000,
-			waitUntilVisible: true,
-			afterString: async (step, instance) => {
-				instance.freeze();
-				title.unfreeze();
-			}
-		}).type("Yes please!").pause(500).delete()
-		.type(`<a href="https://github.com/bleafman/spicy-readme-graphics">spicy-readme-graphics<a>`).pause(250).delete();
+    const sub = new TypeIt("#sub", {
+      speed: 40,
+      deleteSpeed: 20,
+      startDelay: 750,
+      nextStringDelay: 1000,
+      waitUntilVisible: true,
+      afterString: async (step, instance) => {
+        instance.freeze();
+        title.unfreeze();
+      }
+    }).type("Yes please!").pause(500).delete()
+      .type(`<a href="https://github.com/bleafman/spicy-readme-graphics">spicy-readme-graphics<a>`).pause(250).delete();
 
-		title.go();
+    title.go();
 
-		/***** Text and Typing Effect END *****/
+    /***** Text and Typing Effect END *****/
 
 		/*****
 		 *  
 		 * Particle Effect START
 		 * 
+     * tsParticles .load function takes two arguements:
+     * 1. the id of the element where it is going to attach the particle effect canvas (#bg in this case)
+     * 2. a config for the particles
+     * 
+     * Particle effects and visualizations are a pretty deep topic. I'd suggest using one of 
+     * the demo configs in the link below to start and tweaking them.
+     * 
+     * Some demo configs for tsParticles: https://github.com/matteobruni/tsparticles
 		 * Check out the tsParticle sDocs for more info: https://github.com/matteobruni/tsparticles
-		 * Some demo configs for tsParticles: https://github.com/matteobruni/tsparticles
 		 * 
 		 * 
 	  *****/
 
-		tsParticles
-  .load("bg", {
-    fpsLimit: 60,
-    backgroundMode: {
-      enable: true,
-      zIndex: 0
-    },
-    particles: {
-      number: {
-        value: 80,
-        density: {
+    tsParticles
+      .load("bg", {
+        fpsLimit: 60,
+        backgroundMode: {
           enable: true,
-          area: 800
-        }
-      },
-      color: {
-        value: "#ff0000",
-        animation: {
-          enable: true,
-          speed: 20,
-          sync: true
-        }
-      },
-      stroke: {
-        width: 0
-      },
-      opacity: {
-        value: 0.5,
-        random: false,
-        animation: {
-          enable: false,
-          speed: 3,
-          minimumValue: 0.1,
-          sync: false
-        }
-      },
-      size: {
-        value: 3,
-        random: true,
-        animation: {
-          enable: false,
-          speed: 20,
-          minimumValue: 0.1,
-          sync: false
-        }
-      },
-      links: {
-        enable: true,
-        distance: 100,
-        color: "#ffffff",
-        opacity: 0.4,
-        width: 1
-      },
-      move: {
-        enable: true,
-        speed: 6,
-        direction: "none",
-        random: false,
-        straight: false,
-        outMode: "out",
-        attract: {
-          enable: false,
-          rotateX: 600,
-          rotateY: 1200
-        }
-      }
-    },
-    interactivity: {
-      detectsOn: "canvas",
-      events: {
-        onHover: {
-          enable: true,
-          mode: "repulse"
+          zIndex: 0
         },
-        onClick: {
-          enable: true,
-          mode: "push"
-        },
-        resize: true
-      },
-      modes: {
-        grab: {
-          distance: 400,
+        particles: {
+          number: {
+            value: 80,
+            density: {
+              enable: true,
+              area: 800
+            }
+          },
+          color: {
+            value: "#ff0000",
+            animation: {
+              enable: true,
+              speed: 20,
+              sync: true
+            }
+          },
+          stroke: {
+            width: 0
+          },
+          opacity: {
+            value: 0.5,
+            random: false,
+            animation: {
+              enable: false,
+              speed: 3,
+              minimumValue: 0.1,
+              sync: false
+            }
+          },
+          size: {
+            value: 3,
+            random: true,
+            animation: {
+              enable: false,
+              speed: 20,
+              minimumValue: 0.1,
+              sync: false
+            }
+          },
           links: {
-            opacity: 1
+            enable: true,
+            distance: 100,
+            color: "#ffffff",
+            opacity: 0.4,
+            width: 1
+          },
+          move: {
+            enable: true,
+            speed: 6,
+            direction: "none",
+            random: false,
+            straight: false,
+            outMode: "out",
+            attract: {
+              enable: false,
+              rotateX: 600,
+              rotateY: 1200
+            }
           }
         },
-        bubble: {
-          distance: 400,
-          size: 40,
-          duration: 2,
-          opacity: 0.8
+        interactivity: {
+          detectsOn: "canvas",
+          events: {
+            onHover: {
+              enable: true,
+              mode: "repulse"
+            },
+            onClick: {
+              enable: true,
+              mode: "push"
+            },
+            resize: true
+          },
+          modes: {
+            grab: {
+              distance: 400,
+              links: {
+                opacity: 1
+              }
+            },
+            bubble: {
+              distance: 400,
+              size: 40,
+              duration: 2,
+              opacity: 0.8
+            },
+            repulse: {
+              distance: 200
+            },
+            push: {
+              quantity: 4
+            },
+            remove: {
+              quantity: 2
+            }
+          }
         },
-        repulse: {
-          distance: 200
-        },
-        push: {
-          quantity: 4
-        },
-        remove: {
-          quantity: 2
+        detectRetina: true,
+        background: {
+          color: "2D3748",
+          image: "",
+          position: "50% 50%",
+          repeat: "no-repeat",
+          size: "cover"
         }
-      }
-    },
-    detectRetina: true,
-    background: {
-      color: "2D3748",
-      image: "",
-      position: "50% 50%",
-      repeat: "no-repeat",
-      size: "cover"
-    }
-  })
+      })
 
 
-		/***** Particle Effect END *****/
+    /***** Particle Effect END *****/
 
 
-		// Peloading / Fade-in Effect
+    // Peloading / Fade-in Effect
 
-		window.onload = function () { document.body.classList.remove('is-preload'); }
-		window.ontouchmove = function () { return false; }
-		window.onorientationchange = function () { document.body.scrollTop = 0; }
+    window.onload = function () { document.body.classList.remove('is-preload'); }
+    window.ontouchmove = function () { return false; }
+    window.onorientationchange = function () { document.body.scrollTop = 0; }
 
-	</script>
+  </script>
 </body>
 
 </html>
