@@ -11,18 +11,18 @@ Spicy Readme Graphics is a simple app with some cool effects to help people spic
 
 No idea. Companies always seem to be asking for a Github profile link, so it seems like a graphic would help make a good first impression.
 
-Keep in mind is that it increases the page load time and data requirement for your Github Readme(the GIF above is 3.5MB after optimization) so you may just want an image or maybe no graphic at all.
+Keep in mind is that it increases the page load time and data requirement for your Github Readme (the GIF above is 3.5MB after optimization) so you may just want an image or maybe no graphic at all.
 
 ## How to use Spicy Readme Graphics
 
 ### Table of contents
 
-1. [A quick note before getting started](#a-quick-note-before-getting-started)
-2. [Prerequisites](#prerequisites)
-3. [Explination of the files](#the-files)
-4. [Making a screen recording](#making-a-screen-recording)
-5. [Turning the recording into a GIF](#turning-the-recording-into-a-gif)
-7. [Using Spicy Readme Graphics as a landing page](using-spicy-readme-graphics-as-a-landing-page)
+- [A quick note before getting started](#a-quick-note-before-getting-started)
+- [Prerequisites](#prerequisites)
+- [Explination of the files](#the-files)
+- [Making a screen recording](#making-a-screen-recording)
+- [Turning the recording into a GIF](#turning-the-recording-into-a-gif)
+- [Using Spicy Readme Graphics as a landing page](using-spicy-readme-graphics-as-a-landing-page)
 
 ### A quick notes before getting started
 
