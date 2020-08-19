@@ -9,8 +9,8 @@ Most of the other CSS is for the fade in effect and responsiveness (if used as a
 *****/
 
 :root {
-	--main-bg-color: #F7FAFC;
-	--main-text-color: #1A202C;
+	--main-bg-color: black; /* Note that the particle effect will override this background */
+	--main-text-color: #F7FAFC;
 	--main-font-family: "Source Sans Pro", sans-serif;
 }
 
