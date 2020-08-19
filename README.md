@@ -11,7 +11,7 @@ Spicy Readme Graphics is a simple app with some cool effects to help people spic
 
 No idea. Companies always seem to be asking for a Github profile link, so it seems like a graphic would help make a good first impression.
 
-Keep in mind is that it increases the page load time and data requirement for your Github Readme (the GIF above is 3.5MB after optimization) so you may just want an image or maybe no graphic at all.
+Keep in mind that it increases the page load time and data requirement for your Github Readme (the GIF above is 3.5MB after optimization) so you may just want an image or maybe no graphic at all.
 
 ## How to use Spicy Readme Graphics
 
@@ -20,7 +20,7 @@ Keep in mind is that it increases the page load time and data requirement for yo
 - [A quick note before getting started](#a-quick-note-before-getting-started)
 - [Prerequisites](#prerequisites)
 - [Getting started](#getting-started)
-- [Explination of the files](#the-files)
+- [Explanation of the files](#the-files)
 - [Make it your own!](#make-it-your-own)
 - [Making a screen recording](#making-a-screen-recording)
 - [Turning the recording into a GIF](#turning-the-recording-into-a-gif)
@@ -46,7 +46,7 @@ You'll be OK using Spicy Readme Graphics if you have...
 
 **AND/OR**
 
-A willingness to use Google and figure stuff out as you go. Also know as ["technical sophistication"](https://medium.com/@jajoosam/technical-sophistication-d33a88650032).
+A willingness to use Google and figure stuff out as you go. Also known as ["technical sophistication"](https://medium.com/@jajoosam/technical-sophistication-d33a88650032).
 
 ### Getting started
 
@@ -103,11 +103,11 @@ Before turning your awesome graphic into a GIF, you'll need to make a screen rec
 There's two ways to do this:
 
 1. EASY: Use GIPHY
-2. ADVANCED: On you're own via command line
+2. ADVANCED: On your own via command line
 
 #### Use GIPHY
 
-GIPHY is really good at taking videos and turning them into optimized GIFs (not suprising for a company that has a LOT of GIFs).
+GIPHY is really good at taking videos and turning them into optimized GIFs (not surprising for a company that has a LOT of GIFs).
 
 If your video is less than 15 seconds, you can upload it to GIPHY, and then download it as an optimized GIF. I used the "Social" optimized version in the GIF at the top of the page.
 
@@ -115,7 +115,7 @@ If your video is less than 15 seconds, you can upload it to GIPHY, and then down
 
 As you can imagine, this is going to require a lot more technical sophistication. I'd only recommend this if you REALLY need more than 15 seconds. Keep in mind that 15 seconds is a long time to look at a GIF and it's going to make your READMEs load much slower.
 
-[Here's the guide I followed to convert a video to a GIF via command line here.](https://askubuntu.com/questions/648603/how-to-create-an-animated-gif-from-mp4-video-via-command-line).
+[Here's the info I used to convert a video to a GIF via command line here.](https://askubuntu.com/questions/648603/how-to-create-an-animated-gif-from-mp4-video-via-command-line).
 
 I ended up installing `ffmpeg` and `imagemagick` and then ran the following command (`input.mp4` should be replaced with your video recording):
 
@@ -123,7 +123,7 @@ I ended up installing `ffmpeg` and `imagemagick` and then ran the following com
 ffmpeg -i type-effect-video.mov -vf "fps=15,scale=480:-1:flags=lanczos" -c:v pam -f image2pipe - | convert -delay 5 - -loop 0 -layers optimize output-480.gif
 ```
 
-That said, you shouldn't run things in terminal given to you by strangers on the internet unless you know what you're doing. The GIPHY approach is much better if none of this made any sense to you.
+That said, you probably shouldn't run things in terminal given to you by strangers on the internet unless you know what you're doing. The GIPHY approach is much better if none of this made any sense to you.
 
 ### Setting up the graphic on your README
 
