@@ -93,8 +93,8 @@ To recap the comments in the code:
 
 Before turning your awesome graphic into a GIF, you'll need to make a screen recording of it.
 
-[Making a screen recording on Mac](https://support.apple.com/en-us/HT208721)
-[Making a screen recording on PC](https://www.pcmag.com/how-to/how-to-record-the-screen-on-your-windows-pc-or-mac)
+* [Making a screen recording on Mac](https://support.apple.com/en-us/HT208721)
+* [Making a screen recording on PC](https://www.pcmag.com/how-to/how-to-record-the-screen-on-your-windows-pc-or-mac)
 
 **NOTE** If you want to have an easy time turning your recording into a GIF, you'll want your final recording to be less than 15 seconds (more on this in the next section).
 
